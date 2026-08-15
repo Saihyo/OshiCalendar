@@ -26,37 +26,8 @@ PWA対応により、Androidのホーム画面にインストールしてネイ�
 
 ---
 
-## 🚀 GitHub Pages へのデプロイ手順
 
-### 1. リポジトリを作成
-
-```bash
-git init
-git add .
-git commit -m "first commit"
-```
-
-GitHub で新しいリポジトリを作成し、pushします。
-
-```bash
-git remote add origin https://github.com/<ユーザー名>/<リポジトリ名>.git
-git branch -M main
-git push -u origin main
-```
-
-### 2. GitHub Pages を有効化
-
-1. リポジトリの **Settings** タブを開く
-2. 左メニューの **Pages** をクリック
-3. **Source** を `Deploy from a branch` に設定
-4. **Branch** を `main` / `/ (root)` に設定して **Save**
-5. しばらく待つと以下のURLでアクセスできます
-
-```
-https://<ユーザー名>.github.io/<リポジトリ名>/
-```
-
-### 3. Androidにインストール
+###  Androidにインストール
 
 1. 上記URLをAndroidのChromeで開く
 2. 画面下部に表示される **「ホーム画面に追加」** バナーをタップ
@@ -79,21 +50,6 @@ oshi-calendar-pwa/
 
 > `index.html` 単体に全機能が入っているため、ファイルをブラウザで直接開いて動作確認することもできます。  
 > ただし Service Worker（オフライン機能）はHTTPS環境でのみ有効になります。
-
----
-
-## 🛠 ローカルで動かす場合
-
-Service Worker をローカルでテストするには、HTTPサーバーが必要です。
-
-```bash
-# Python 3
-python3 -m http.server 8080
-# → http://localhost:8080 でアクセス
-
-# Node.js（npx）
-npx serve .
-```
 
 ---
 
